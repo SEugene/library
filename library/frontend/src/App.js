@@ -1,6 +1,8 @@
 import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header.js'
+import Footer from './components/Footer.js'
 import AuthorList from './components/Author.js'
 import UserList from './components/User.js'
 import axios from 'axios'
@@ -43,8 +45,10 @@ class App extends React.Component {
    render () {
        return (
            <div>
+               <Header />
                <AuthorList authors={this.state.authors} />
                <UserList users={this.state.users} />
+               <Footer />
            </div>
        )
    }
